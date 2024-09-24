@@ -1,0 +1,22 @@
+```mermaid
+sequenceDiagram
+    participant ThreatActor
+    participant ValidDNSServer
+    participant AttackersDNSserver 
+    participant GoodUser 
+
+    ThreatActor->>ValidDNSServer: what is the address of www.ransomware.net 
+    ValidDNSServer->>AttackersDNSServer: sends a request asking the IP of www.ransomware.net
+    AttackersDNSServer->>ValidDNSServer: Here is all ransomware addresses 
+|www.freeemoney.net | 192.168.3.1  	    |
+|www.bbc.net	    | 192.168.3.1       |
+|www.facebook.net  	| 192.168.3.1  	    |
+
+    GoodUser->>ValidDNSServer: what is the address of www.freemoney.net?
+    ValidDNSServer->>GoodUser: 192.168.3.1 (An Attacker Address)
+    
+
+
+
+
+```
