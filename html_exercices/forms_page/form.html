@@ -1,10 +1,9 @@
-<!-- form.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo Form</title>
+    <title>Liquor Store Form</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,15 +12,40 @@
         <a href="demo1.html">Back to Table of Contents</a>
     </header>
     <form action="#" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
+        <label for="name">First Name:</label>
+        <input type="text" id="name" name="name" required minlength="2" maxlength="20" pattern="[a-zA-Z0-9]+">
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required min="18" max="110"
+
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="adress"
 
         <label for="message">Message:</label>
         <textarea id="message" name="message" rows="4" required></textarea>
         
+        <section class="copy of receipt">
+            <label for="receipt"> Would you like to get an email receipt ?</label>
+                <input id="yes" type="radio" name="receipt" value="yes">
+                <label for="yes"> Yes </label>
+                <input id="no" type="radio" name="receipt" value="no">
+                <label for="no">No</label>
+        </section>
+
+        <form>
+            <label for="state"> Which city from triangle are you from ?</label>
+            <select id="state" name="state">
+                <option value="Raleigh">Raleigh</option>
+                <option value="Durham">Durham</option>
+                <option value="Apex">Apex</option>
+                
+
+            </select>
+        </form>
+
         <button type="submit">Submit</button>
     </form>
 </body>
